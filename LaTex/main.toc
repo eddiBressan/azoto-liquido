@@ -2,8 +2,10 @@
 \babel@toc {italian}{}\relax 
 \contentsline {section}{\numberline {1}Obiettivo dell'esperienza}{2}{}%
 \contentsline {section}{\numberline {2}Cenni teorici}{2}{}%
-\contentsline {section}{\numberline {3}Apparato sperimentale}{2}{}%
-\contentsline {section}{\numberline {4}Procedura sperimentale}{2}{}%
-\contentsline {section}{\numberline {5}Risultati delle misure}{2}{}%
-\contentsline {section}{\numberline {6}Analisi dati}{2}{}%
-\contentsline {section}{\numberline {7}Conclusioni}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Calore latente di vaporizzazione dell'azoto}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Calore specifico medio}{3}{}%
+\contentsline {section}{\numberline {3}Apparato sperimentale}{4}{}%
+\contentsline {section}{\numberline {4}Procedura sperimentale}{4}{}%
+\contentsline {section}{\numberline {5}Risultati delle misure}{4}{}%
+\contentsline {section}{\numberline {6}Analisi dati}{4}{}%
+\contentsline {section}{\numberline {7}Conclusioni}{4}{}%

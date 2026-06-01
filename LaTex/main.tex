@@ -14,6 +14,7 @@
 \usepackage{textcomp}
 \usepackage{amssymb}
 \usepackage{parskip}
+\usepackage{float}
 
 \title{Misura del calore specifico a bassa temperatura}
 \author{Eddi Bressan, Davide Conforte}
@@ -34,6 +35,134 @@ campioni solidi: grafite e piombo.
 
 
 \section{Cenni teorici}
+\subsection{Calore latente di vaporizzazione dell'azoto}
+
+L'azoto liquido assorbe calore $\Delta Q_0$ dall'ambiente e quindi evapora con una velocità
+$\frac{\Delta m }{\Delta t}$ che, se le condizioni di contatto termico con l'ambiente rimangono invariate,
+si può dire costante:
+\begin{equation*}
+    W_0 = \frac{\Delta Q_0}{\Delta t} = \frac{\lambda_f \Delta m}{\Delta t}
+\end{equation*}
+dove $\lambda_f$ è il calore latente di vaporizzazione dell'azoto.
+Da cui:
+\begin{equation*}
+    \Delta m = \frac{W_0}{\lambda_f} \Delta t
+\end{equation*}
+Quando si fa passare corrente nel circuito con la resistenza a contatto con l'azoto liquido, la
+quantità di calore assorbita aumenta di una frazione corrispondente alla potenza dissipata dalla
+resistenza $W_R$:
+\begin{equation*}
+    W_0 + W_R = \frac{\Delta Q_0 + \Delta Q_R}{\Delta t}
+\end{equation*}
+Da cui:
+\begin{equation*}
+    \Delta m = \frac{W_0 + W_R}{\lambda_f} \Delta t
+\end{equation*}
+Le pendenze delle rette con il circuito aperto (senza corrente SC) e con il circuito chiuso
+(con corrente CC) corrispondono alla variazione di massa nell'unità di tempo:
+\begin{align*}
+    \left. \frac{\Delta m}{\Delta t} \right|_{SC} &= \frac{W_0}{\lambda_f} \\
+    \left. \frac{\Delta m}{\Delta t} \right|_{CC} &= \frac{W_0}{\lambda_f} + \frac{W_R}{\lambda_f}
+\end{align*}
+
+Sottraendo alla pendenza misurata con la corrente quella misurata senza, posso isolare il solo
+contributo della resistenza:
+\begin{equation*}
+    \left. \frac{\Delta m}{\Delta t} \right|_{CC} - \left. \frac{\Delta m}{\Delta t} \right|_{SC} = \frac{W_R}{\lambda_f} = \frac{V I}{\lambda_f}
+\end{equation*}
+dove V e I sono rispettivamente la differenza di tensione e l'intensità di corrente misurate con
+l'amperometro e il voltmetro (in serie e in parallelo con la resistenza).
+
+In questo modo si riesce a ottenere una misura del calore latente di vaporizzazione dell'azoto:
+\begin{equation*}
+    \lambda_f = \frac{V I}{\left. \frac{\Delta m}{\Delta t} \right|_{CC} - \left. \frac{\Delta m}{\Delta t} \right|_{SC}}
+\end{equation*}
+con errore:
+\begin{align*}
+    \Delta \lambda_f &= \Delta V \left| \frac{I}{\left. \frac{\Delta m}{\Delta t} \right|_{CC} - \left. \frac{\Delta m}{\Delta t} \right|_{SC}} \right| + \Delta I \left| \frac{V}{\left. \frac{\Delta m}{\Delta t} \right|_{CC} - \left. \frac{\Delta m}{\Delta t} \right|_{SC}} \right| + \\
+    &\quad + \left[ \Delta\left(\left. \frac{\Delta m}{\Delta t} \right|_{CC}\right) + \Delta \left( \left. \frac{\Delta m}{\Delta t} \right|_{SC} \right) \right] \left| \frac{VI}{\left( \left. \frac{\Delta m}{\Delta t} \right|_{CC} - \left. \frac{\Delta m}{\Delta t} \right|_{SC} \right)^2} \right|
+\end{align*}
+
+In alternativa possiamo usare il metodo grafico.
+Indicando con $t_{start}$ e $t_{stop}$ gli istanti di accensione e di spegnimento, si tracciano le
+rette per la fase 1 (prima dell'accensione) e per la fase 3 (dopo l'accensione) e le si estrapola
+a $t_m = \frac{t_{start} + t_{stop}}{2}$.
+
+Poi si tracciano le rette a pendenza massima e minima, estrapolandole allo stesso $t_m$ e
+si misurano i valori di $\Delta \left( \left.\Delta m \right|_{fase 1} \right)$ e $\Delta \left( \left.\Delta m \right|_{fase 3} \right)$.
+
+Si misurano quindi la distanza tra le due rette al tempo $t_m$ di valore $\Delta m$ e l'errore $\Delta \left( \Delta m \right) = \Delta \left( \left.\Delta m \right|_{fase 1} \right) + \Delta \left( \left.\Delta m \right|_{fase 3} \right)$.
+
+Si può così misurare il calore latente di vaporizzazione:
+\begin{equation*}
+    \lambda_f = \frac{V I}{\Delta m} (t_{stop} - t_{start}) = \frac{V I \Delta t}{\Delta m}
+\end{equation*}
+con errore:
+\begin{equation*}
+    \Delta \lambda_f = \lambda_f \left( \frac{\Delta V}{V} + \frac{\Delta I}{I} + \frac{\Delta (\Delta m)}{(\Delta m)} + \frac{\Delta (\Delta t)}{(\Delta t)} \right)
+\end{equation*}
+Per questo metodo, si possono ricavare le equazioni delle rette con il metodo dei minimi quadrati
+lineari per trovare il migliore fit lineare.
+
+
+\subsection{Calore specifico medio}
+
+Il calore trasferito da n moli di un materiale all'azoto liquido ad una certa temperatura è:
+\begin{equation*}
+    dQ = nc(T)dT
+\end{equation*}
+con c calore specifico del materiale alla temperatura T.
+
+Nell'intervallo tra la temperatura ambiente $T_a$ e la temperatura di vaporizzazione dell'azoto
+liquido $T_f$ si ha:
+\begin{equation*}
+    Q = n \int_{T_a}^{T_f} c(T)dT \approx n \sum \frac{c(T_k) + c(T_{k+1})}{2} \abs{T_{k+1} - T_k}
+\end{equation*}
+Si definisce il calore specifico medio nell'intervallo di temperatura come:
+\begin{equation*}
+    \bar{c_x} = \frac{1}{n} \frac{Q}{\abs{T_a - T_f}} = \frac{1}{\abs{T_a - T_f}} \sum \frac{c(T_k) + c(T_{k+1})}{2} \abs{T_{k+1} - T_k}
+\end{equation*}
+Formula che può essere utilizzata per il calcolo approssimato degli integrali (regola del trapezio)
+per calcolare la capacità termica molare media per le sostanze di nostro interesse.
+
+Pertanto, usando il metodo grafico e estrapolando le rette per la fase 1 (prima dell'immersione
+della sostanza) e per la fase 3 (dopo la stabilizzazione della perdita di massa nel tempo) come
+descritto sopra, si può calcolare il calore specifico medio (J/(Kg K)) come:
+\begin{equation*}
+        \bar{c_x} = \frac{\Delta m \lambda_f}{m_x (T_f - T_a)}
+\end{equation*}
+con $m_x$ la massa della sostanza. L'errore di $c_x$ è dato da:
+\begin{equation*}
+    \Delta c_x = \left( \frac{\Delta (\Delta m)}{(\Delta m)} + \frac{\Delta \lambda_f}{\lambda_f} + \frac{\Delta m_x}{m_x} + \frac{2 \Delta T}{(T_a - T_f)} \right) c_x
+\end{equation*}
+Di seguito si riporta una tabella di calori specifici molari a diverse temperature, su cui possiamo basarci per 
+fare predizioni utili allo svolgimento della esperienza:
+\begin{table}[H]
+\centering
+\begin{tabular}{ccc}
+\toprule
+\textbf{T} (K) & \textbf{C} ($\text{cal}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$) & \textbf{Pb} ($\text{cal}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$) \\
+\midrule
+70  & 0.221 & 5.54 \\
+80  & 0.278 & 5.64 \\
+90  & 0.339 & 5.74 \\
+100 & 0.402 & 5.84 \\
+120 & 0.539 & 5.94 \\
+140 & 0.689 & 5.99 \\
+160 & 0.849 & 6.09 \\
+180 & 1.019 & 6.14 \\
+200 & 1.188 & 6.19 \\
+220 & 1.36  & 6.24 \\
+240 & 1.54  & 6.29 \\
+260 & 1.71  & 6.34 \\
+280 & 1.88  & 6.38 \\
+300 & 2.05  & 6.44 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
 
 \section{Apparato sperimentale}
 
