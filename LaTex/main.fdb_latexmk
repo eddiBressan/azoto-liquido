@@ -1,8 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1780333358.55784 "/home/eddi/Desktop/Lab-Meccanica/azoto-liquido/LaTex/main.tex" "main.pdf" "main" 1780333359.06722 0
+["pdflatex"] 1780766370.80485 "/home/eddi/Desktop/Lab-Meccanica/azoto-liquido/LaTex/main.tex" "main.pdf" "main" 1780766371.39059 0
   "/etc/texmf/web2c/texmf.cnf" 1771968813.84324 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/eddi/Desktop/Lab-Meccanica/azoto-liquido/LaTex/main.tex" 1780333358.29226 7454 6ca630339da69ac3ed4ab36e48b9e14b ""
+  "/home/eddi/Desktop/Lab-Meccanica/azoto-liquido/LaTex/main.tex" 1780766369.95736 15536 b618265f2a82af717beee28a20960111 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -75,12 +76,14 @@
   "/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty" 1615762720 4288 94714aa7f535440f33181fec52a31963 ""
   "/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty" 1356048875 29610 a9597219b282d9c78b02393dcd7d4322 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1636152094 2900 1537cc8184ad1792082cd229ecc269f4 ""
+  "/usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb" 1772031686.73128 136101 f533469f523533d38317ab5729d00c8a ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772031694.36836 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772031713 8213557 43cd8f209ca212202fad7d3a4d0f6a52 ""
-  "main.aux" 1780333359.02727 1127 b0da7f6f87d3dc089cf172d848b203d1 "pdflatex"
-  "main.tex" 1780333358.29226 7454 6ca630339da69ac3ed4ab36e48b9e14b ""
-  "main.toc" 1780333359.02727 684 38703a33cd97abb9693fd806a6b8fdde "pdflatex"
+  "main.aux" 1780766371.34161 1860 583bd1b5676300e5c715067943c1693e "pdflatex"
+  "main.tex" 1780766369.95736 15536 b618265f2a82af717beee28a20960111 ""
+  "main.toc" 1780766371.34161 1021 de800c61e94026b3bd653b95731ff1f6 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
