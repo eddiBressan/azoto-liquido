@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {5.3}Calcolo della Massa Evaporata (Grafite)}{13}{}%
 \contentsline {subsection}{\numberline {5.4}Determinazione del Calore Specifico Molare (Grafite)}{15}{}%
 \contentsline {subsection}{\numberline {5.5}Seconda sessione (Grafite)}{15}{}%
-\contentsline {subsection}{\numberline {5.6}Calcolo della Massa Evaporata (Piombo)}{16}{}%
-\contentsline {subsection}{\numberline {5.7}Determinazione del Calore Specifico Molare (Piombo)}{17}{}%
-\contentsline {subsection}{\numberline {5.8}Seconda sessione (Piombo)}{18}{}%
-\contentsline {section}{\numberline {6}Conclusioni}{19}{}%
+\contentsline {subsection}{\numberline {5.6}Calcolo della Massa Evaporata (Piombo)}{17}{}%
+\contentsline {subsection}{\numberline {5.7}Determinazione del Calore Specifico Molare (Piombo)}{18}{}%
+\contentsline {subsection}{\numberline {5.8}Seconda sessione (Piombo)}{19}{}%
+\contentsline {section}{\numberline {6}Conclusioni}{20}{}%

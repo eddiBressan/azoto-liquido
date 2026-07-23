@@ -568,7 +568,6 @@ Infine, propagando gli errori per la grandezza $\lambda_f$ espressa come prodott
 \end{table}
 \subsection{Estrapolazione Grafica dei Background}
 I dati sperimentali di massa e tempo relativi alla Fase I e alla Fase III, riportati in Tab.~\ref{tab:dati_fasi_confronto}, sono stati interpolati linearmente tramite l'algoritmo dei minimi quadrati (\texttt{REGR.LIN}) di LibreOffice Calc. Questo ha permesso di ricavare i parametri delle rette di background $m(t) = A + B \cdot t$ con le rispettive incertezze associate. Per la Fase III, al fine di eliminare la forte sovrastima statistica dell'errore legata all'estrapolazione a $t=0$, l'asse dei tempi è stato preventivamente traslato rispetto all'istante mediano $t_m = 454.865\text{ s}$.
-
 \noindent
 \begin{minipage}[t]{0.48\textwidth}
     \centering
@@ -1087,57 +1086,12 @@ Propagando i contributi di incertezza, il valore sperimentale finale del calore 
 \begin{equation*}
     C_{m, \text{Grafite}} = (1.16 \pm 0.10)\text{ cal}/(\text{mol}\cdot\text{K})
 \end{equation*}
-
+\newpage
 
 \subsection{Calcolo della Massa Evaporata (Piombo)}
 
-Per isolare la massa di azoto evaporata esclusivamente a causa del raffreddamento del
-blocco di piombo, i dati delle scale di background iniziali (Fase I) e finali (Fase III)
-sono stati interpolati tramite regressione lineare. Le rette ottenute sono state successivamente
-valutate in corrispondenza dell'istante mediano dell'immersione, individuato a $t_m$ = 321.835 s.
+Le rette di background iniziale (Fase I) e finale (Fase III) sono state estrapolate in corrispondenza dell'istante mediano $t_m$ = 321.835 s.
 
-
-\vspace{0.2cm}
-\noindent
-\begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \textbf{Regressione Lineare Fase I} \\
-    \textit{(Circuito Aperto - Iniziale)}
-    \begin{align*}
-        B_1 &= -0.015640 \text{ g/s} \\
-        A_1 &= 1537.997919 \text{ g} \\
-        \Delta B_1 &= 2.1468 \times 10^{-4} \text{ g/s} \\
-        \Delta A_1 &= 3.5643 \times 10^{-2} \text{ g}
-    \end{align*}
-    Valutazione:
-    \begin{equation*}
-        m_{\text{Fase I}}(t_m) = 1532.964\text{ g}
-    \end{equation*}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \textbf{Regressione Lineare Fase III} \\
-    \textit{(Circuito Aperto - Post-Immersione)}
-    \begin{align*}
-        B_3 &= -0.010834 \text{ g/s} \\
-        A_3 &= 1537.494067 \text{ g} \\
-        \Delta B_3 &= 3.5113 \times 10^{-4} \text{ g/s} \\
-        \Delta A_3 &= 1.5886 \times 10^{-3} \text{ g}
-    \end{align*}
-    Valutazione:
-    \begin{equation*}
-        m_{\text{Fase III}}(t_m) = 1526.007\text{ g}
-    \end{equation*}
-\end{minipage}
-\vspace{0.4cm}
-\noindent
-
-La massa netta di azoto evaporato per l'apporto termico del solo campione si ricava dalla differenza tra le due estrapolazioni all'istante $t_m$:
-\begin{equation*}
-    \Delta m_{\text{azoto}} = m_{\text{Fase I}}(t_m) - m_{\text{Fase III}}(t_m) = 1532.964\text{ g} - 1526.007\text{ g} = 6.957\text{ g}
-\end{equation*}
-L'incertezza associata a tale grandezza, ricavata tramite la propagazione degli errori dei fit, risulta pari a $\Delta(\Delta m_{\text{azoto}}) = 0.377\text{ g}$ (corrispondente a un errore relativo del $5.42\%$).
 
 \noindent
 \begin{minipage}[t]{0.38\textwidth}
@@ -1195,9 +1149,55 @@ L'incertezza associata a tale grandezza, ricavata tramite la propagazione degli 
     \label{tab:dati_piombo}
 \end{minipage}
 
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Regressione Lineare Fase I} \\
+    \textit{(Circuito Aperto - Iniziale)}
+    \begin{align*}
+        B_1 &= -0.015640 \text{ g/s} \\
+        A_1 &= 1537.997919 \text{ g} \\
+        \Delta B_1 &= 2.1468 \times 10^{-4} \text{ g/s} \\
+        \Delta A_1 &= 3.5643 \times 10^{-2} \text{ g}
+    \end{align*}
+    Valutazione:
+    \begin{equation*}
+        m_{\text{Fase I}}(t_m) = 1532.964\text{ g}
+    \end{equation*}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Regressione Lineare Fase III} \\
+    \textit{(Circuito Aperto - Post-Immersione)}
+    \begin{align*}
+        B_3 &= -0.010834 \text{ g/s} \\
+        A_3 &= 1537.494067 \text{ g} \\
+        \Delta B_3 &= 3.5113 \times 10^{-4} \text{ g/s} \\
+        \Delta A_3 &= 1.5886 \times 10^{-3} \text{ g}
+    \end{align*}
+    Valutazione:
+    \begin{equation*}
+        m_{\text{Fase III}}(t_m) = 1526.007\text{ g}
+    \end{equation*}
+\end{minipage}
+\vspace{0.4cm}
+\noindent
+\par\vspace{0.5cm} 
+\begin{center}
+    \nopagebreak 
+    \includegraphics[width=0.65\textwidth]{../Grafici/Graficopiombo_1.png}
+    \captionof{figure}{Andamento temporale della massa. Le linee indicano i fit di background estrapolati all'istante $t_m = 321.8\text{ s}$.}
+    \label{fig:grafico_grafite_2}
+\end{center}
+\vspace{0.4cm}
 
-MANCA IL GRAFICO!!!!!!
-
+La massa netta di azoto evaporato per l'apporto termico del solo campione si ricava dalla differenza tra le due estrapolazioni all'istante $t_m$:
+\begin{equation*}
+    \Delta m_{\text{azoto}} = m_{\text{Fase I}}(t_m) - m_{\text{Fase III}}(t_m) = 1532.964\text{ g} - 1526.007\text{ g} = 6.957\text{ g}
+\end{equation*}
+L'incertezza associata a tale grandezza, ricavata tramite la propagazione degli errori dei fit, risulta pari a $\Delta(\Delta m_{\text{azoto}}) = 0.377\text{ g}$ (corrispondente a un errore relativo del $5.42\%$).
 
 \subsection{Determinazione del Calore Specifico Molare (Piombo)}
 
@@ -1216,7 +1216,7 @@ specifico medio del piombo nell'intervallo termico [77,293] K:
 Le rette di background iniziale (Fase I) e finale (Fase III) sono state estrapolate in corrispondenza dell'
 istante medio $t_m$ = 197.7 s.
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \footnotesize
     \noindent
@@ -1301,8 +1301,13 @@ istante medio $t_m$ = 197.7 s.
     \end{equation*}
 \end{minipage}
 
-\par\vspace{0.5cm} 
-MANCA GRAFICO!!!!!!!!!!!!
+\begin{center}
+    \nopagebreak 
+    \includegraphics[width=0.65\textwidth]{../Grafici/Graficopiombo_2.png}
+    \captionof{figure}{Andamento temporale della massa. Le linee indicano i fit di background estrapolati all'istante $t_m = 321.8\text{ s}$.}
+    \label{fig:grafico_grafite_2}
+\end{center}
+\vspace{0.4cm}
 
 
 La massa netta di azoto evaporato esclusivamente a causa del raffreddamento del campione è:
@@ -1323,25 +1328,15 @@ liquido e i calori specifici medi di due campioni solidi di grafite e piombo.
 
 Per quanto riguarda il calore latente di evaporazione dell'azoto, le due sessioni di misura hanno
 fornito i valori finali di $235 \pm 19$ J/g e $172 \pm 11$ J/g.
-Sebbene la prima misura si avvicini al valore di riferimento della letteratura scientifica
-di circa 199 J/g, la fluttuazione tra le due sessioni suggerisce la presenza di dispersioni
-termiche variabili.
-La discrepanza rispetto al valore teorico può essere attribuita a una non perfetta
-adiabaticità del vaso Dewar e agli scambi termici con l'ambiente.
-Per minimizzare gli errori sistematici nell'analisi dei campioni, è stato razionalmente
-scelto il valore della seconda calibrazione (172 J/g) per garantire la massima coerenza con le 
-risposte termiche dell'apparato durante le sessioni successive.
+Il valore di letteratura scientifica si trova tra i due valori.
 
 I calori specifici molari medi, calcolati nell'intervallo termico tra 77.0 K e 293.0 K, hanno restituito
 i seguenti risultati:
 \begin{itemize}
-    \item Grafite: I valori ottenuti nelle due sessioni, pari a $1.22 \pm 0.13$ cal/(mol K) e $1.16 \pm 0.10$ cal/(mol K), risultano estremamente coerenti tra loro e ben allienati con i valori teorici attesi per questo intervallo di temperatura.
-    \item Piombo: Le misurazioni hanno fornito i valori di $7.14 \pm 0.86$ cal/(mol K) e $7.24 \pm 0.69$ cal/(mol K). Questi risultati si presentano leggermente sovrastimati rispetto al range teorico previsto, che oscilla tra 5.54 e 6.44 cal/(mol K).
+    \item Grafite: $1.22 \pm 0.13$ cal/(mol K) e $1.16 \pm 0.10$ cal/(mol K)    
+    \item Piombo: $7.14 \pm 0.86$ cal/(mol K) e $7.24 \pm 0.69$ cal/(mol K).
 \end{itemize}
 
-Le cause di queste deviazioni, in particolare per il blocco di piombo, risiedono nelle inefficienze durante il transitorio di raffreddamento.
-Il rapido trasferimento del campione a temperatura ambiente all'interno del calorimetro comporta inevitabili scambi di calore non tracciati.
-
-In sintesi, il metodo grafico e l'estrapolazione ai minimi quadrati si sono rivelati soliti per isolare la massa evaporata netta limitando il forte background ambientale.
-Tuttavia l'accuratezza assoluta delle misurazioni risente intrinsecamente delle condizioni non ideali di isolamento dell'apparato sperimentale, seppur garantendo una notevole precisione e riproducibilità statistica tra tentativi indipendenti.
+I valori sono entrambi compatibili tra le due sessioni di misura.
+Confrontandoli invece con i valori $1.08$ cal/(mol K) e $6.12$ cal/(mol K), calcolati integrando i calori tabellati per il nostro range di misure, i dati teorici rientrano negli intervalli 2$\sigma$.
 \end{document}
